@@ -1,11 +1,11 @@
 import React from 'react'
+import SmsIcon from '@mui/icons-material/Sms';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
 	Navbar,
 	NavItem,
 	NavbarToggler,
 	Collapse,
-	NavLink,
 	Nav,
 	NavbarBrand
 } from 'reactstrap';
@@ -17,22 +17,19 @@ function App() {
 
 	return (
 		<div style={{
-			display: 'block', width: 550, padding: 30
+			display: 'block', padding: 30
 		}}>
-			<Navbar color="light" light expand="md">
+			<Navbar color="dark" dark expand="lg">
 				<NavbarBrand href="/">Facebook</NavbarBrand>
 				<NavbarToggler onClick={() => { setIsOpen(!isOpen) }} />
 				<Collapse isOpen={isOpen} navbar>
-					<Nav className="mr-auto" navbar>
+					<Nav className="midNav" navbar>
 						<NavItem>
-							<NavLink href="#">Home</NavLink>
+                      <input className="head-search" type="search" placeholder="Search Facebook" aria-label="Search" />          
 						</NavItem>
 						<NavItem>
-             <input className="head-search" type="search" placeholder="Search Facebook" aria-label="Search" />          
-						</NavItem>
-						<NavItem>
-							<NavLink href="#">Signup</NavLink>
-						</NavItem>
+					   <button class="dropdown-btn"> <SmsIcon/>  </button>
+					   </NavItem>
 					</Nav>
 				</Collapse>
 			</Navbar>

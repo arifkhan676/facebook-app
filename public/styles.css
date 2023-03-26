@@ -1,5 +1,42 @@
 body{
     padding: 0px;
     margin: 0px;
-    background-color: slategrey;
 }
+*{
+    background-color: #1c1e21;
+}
+.Navbar{
+ background-color: #242526;
+}
+.midNav{
+    margin-left: 25%;
+    display: flex;
+    gap: 70%;
+}
+.head-search{
+    padding: 10px 130px 10px 10px;
+    border-radius: 35px;
+    background-color: transparent;
+    color: darkgrey;
+    border-color: hsla(0, 0%, 88%, 0.39);
+    margin-left: 20%;
+}
+.dropdown-btn {
+    display: block;
+    padding: 8px 10px 8px 18px;
+    text-decoration: none;
+    font-size: 15px;
+    color:#fff;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+  }
+ 
+  @media(max-width:1018px){
+    .midNav{
+        margin-left: 0px;
+        display: flex;
+    }
+  }
