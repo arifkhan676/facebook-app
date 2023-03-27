@@ -1,4 +1,6 @@
 import React from 'react'
+import Input from './Input';
+import Row from './Row';
 import SmsIcon from '@mui/icons-material/Sms';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
@@ -7,33 +9,59 @@ import {
 	NavbarToggler,
 	Collapse,
 	Nav,
-	NavbarBrand
+	NavbarBrand,
+	
 } from 'reactstrap';
+
+
+
 
 function App() {
 
 	// Collapse isOpen State
 	const [isOpen, setIsOpen] = React.useState(false);
 
-	return (
+	return (  
+		<section>
 		<div style={{
 			display: 'block', padding: 30
 		}}>
 			<Navbar color="dark" dark expand="lg">
-				<NavbarBrand href="/">Facebook</NavbarBrand>
+				<NavbarBrand className='navBrand' href="/">Facebook</NavbarBrand>
 				<NavbarToggler onClick={() => { setIsOpen(!isOpen) }} />
 				<Collapse isOpen={isOpen} navbar>
 					<Nav className="midNav" navbar>
 						<NavItem>
-                      <input className="head-search" type="search" placeholder="Search Facebook" aria-label="Search" />          
+						<Input />          
 						</NavItem>
 						<NavItem>
-					   <button class="dropdown-btn"> <SmsIcon/>  </button>
+					   <button className="dropdown-btn"> <SmsIcon/>  </button>
 					   </NavItem>
 					</Nav>
 				</Collapse>
 			</Navbar>
 		</div >
+
+
+		<section className='front-page'>
+			<div className='threeDiv'>
+               <Row />
+		        <div className='row'>
+			   <Input />          
+
+			   </div>
+               <div className='row'>
+			   <h1>Hello</h1>
+
+			   </div>
+
+			</div>
+	     </section>
+
+		</section>
+		
+	
+
 	);
 }
 

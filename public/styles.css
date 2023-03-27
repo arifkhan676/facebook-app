@@ -6,7 +6,7 @@ body{
     background-color: #1c1e21;
 }
 .Navbar{
- background-color: #242526;
+ background-color: #1c1e21;
 }
 .midNav{
     margin-left: 25%;
@@ -32,8 +32,28 @@ body{
     width: 100%;
     cursor: pointer;
     outline: none;
-  }
- 
+  
+}
+.navbar-brand{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+} 
+.threeDiv{
+    display: flex;
+    color: #fff;
+}
+.row{
+    width: 33.93%;
+}
+
+.div1{
+    position: relative;
+    margin-top: 10px;
+    border-bottom: 1px solid gray;
+    width: 50%;
+    padding-bottom: 20px;
+}
+
   @media(max-width:1018px){
     .midNav{
         margin-left: 0px;
