@@ -1,17 +1,15 @@
 import React from 'react'
 
-function Row(){
+function ThirdRow(props){
     return(
-        <div className='row'>
         <div className='div1'>
            <div className="equal">
           <i className="fa-solid fa-house"></i> 
-          <a href=""> <h5>Home</h5> </a>
+          <a href=""> <h4> blank</h4> </a>
        </div>
-     </div>
      </div>
     );
 
 
 }
-export default Row;
+export default ThirdRow;

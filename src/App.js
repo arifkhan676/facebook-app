@@ -1,6 +1,8 @@
 import React from 'react'
 import Input from './Input';
-import Row from './Row';
+import Row from './Row1';
+import SecRow from './Row2';
+import ThirdRow from './Row3';
 import SmsIcon from '@mui/icons-material/Sms';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
@@ -44,21 +46,35 @@ function App() {
 
 
 		<section className='front-page'>
-			<div className='threeDiv'>
-               <Row />
-		        <div className='row'>
-			   <Input />          
+		<div className='containerPro'>
+		<div className='x'>
+		<Row head="Home"
+			 profile="Profile"
+			 />
+			 <Row head="Saved"
+			 profile="Group"
+			 friends = "Friedns"
+			 mostRecent = "Most recent"
+			 />
+		</div>
+		<div className='y'>
+		<SecRow />
+		</div>
+		<div className='z'>
+		<ThirdRow />
 
-			   </div>
-               <div className='row'>
-			   <h1>Hello</h1>
+		</div>
 
-			   </div>
+		
 
-			</div>
+            
+		</div>
+
+	
+
 	     </section>
 
-		</section>
+</section>
 		
 	
 

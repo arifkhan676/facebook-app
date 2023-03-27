@@ -4,7 +4,9 @@ body{
 }
 *{
     background-color: #1c1e21;
+    color:#fff;
 }
+
 .Navbar{
  background-color: #1c1e21;
 }
@@ -19,7 +21,6 @@ body{
     background-color: transparent;
     color: darkgrey;
     border-color: hsla(0, 0%, 88%, 0.39);
-    margin-left: 20%;
 }
 .dropdown-btn {
     display: block;
@@ -38,13 +39,25 @@ body{
     font-family: 'Kanit', sans-serif;
     font-weight: 400;
 } 
-.threeDiv{
+.containerPro{
     display: flex;
-    color: #fff;
 }
 .row{
     width: 33.93%;
 }
+.x{
+    width: 33%;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.y{
+    width: 33%;
+}
+
+.z{
+    width: 33%;
+}
+
 
 .div1{
     position: relative;
