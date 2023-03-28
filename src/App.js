@@ -50,9 +50,16 @@ function App() {
 		<div className='x'>
 		<Row head="Home"
 			 profile="Profile"
+			
+			  saved="Saved"
+			 group="Group"
+			 friends = "Friedns"
+			 mostRecent = "Most recent"
 			 />
-			 <Row head="Saved"
-			 profile="Group"
+			 <Row head="Home"
+			 profile="Profile"
+			  saved="Saved"
+			 group="Group"
 			 friends = "Friedns"
 			 mostRecent = "Most recent"
 			 />
