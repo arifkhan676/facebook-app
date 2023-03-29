@@ -39,6 +39,7 @@ function App() {
 						<Input
 						type="text"  
 						placeholder="Search Facebook"  
+					
 						/>          
 						</NavItem>
 						<NavItem>
