@@ -9,7 +9,7 @@ function Post(){
   
  //  const getTime = new Date().toLocaleTimeString();
   const [postStatus,setPost] = useState("");
-  const [takeInput,setInput] = useState([]);
+  const [userInput,setInput] = useState([]);
 
   function handleChange(event){
     const x = event.target.value;
@@ -19,33 +19,42 @@ function Post(){
   function handleClick(event){
      setInput((preValue) =>{
       return [...preValue,postStatus]
-     })
+     });
+     setPost("");
+  }
+  function PhotoUp(){
+    
   }
 
     return (
         <div className="Post">
             <div className="input-post">
             <Img />
-            <Input
-            onchange={handleChange}
-            name="title"
-           type="text"  
-           placeholder="Whats on your mind? " 
-           value={postStatus}
+            <input
+            onChange={handleChange}
+            type="text"  
+            placeholder="Whats on your mind? " 
+            className="head-search" 
+            value={postStatus}
            /> 
            <button onClick={handleClick} className="btn btn-secondary">Post</button>          
             </div>
             <div className="input-post-2">
-              <DuoIcon />
-              <PhotoSizeSelectActualIcon />
-              <EmojiEmotionsIcon />
+              <DuoIcon className="DuoIcon" />
+              <PhotoSizeSelectActualIcon
+               className="ImgIcon"
+                onClick={PhotoUp}
+                />
+              <EmojiEmotionsIcon  className="FeelIcon"/>
             </div>
+            {userInput.map((Status)=>
+            (
+            <div className="postArea">
+             <h6>{Status}</h6>
+            </div>)
 
-         <div className="postArea">
-           {takeInput.map((status)=>
-            (<h5>{status}</h5>)
            )}
-         </div>
+           
 
         </div>
 
