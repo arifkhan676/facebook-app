@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ThirdRow(props){
+function ThirdRow(){
     return(
         <div className='div1'>
            <div className="equal">

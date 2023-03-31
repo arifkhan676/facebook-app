@@ -47,8 +47,7 @@ h6{
     margin-left: 15%;
 }
 .postArea{
-    position: relative;
-    top: 40%;
+    margin-top: 30px;
     background-color: #2a2b2cd0;
     width: 450px;
     height: 120px;
@@ -120,6 +119,7 @@ h6{
     margin-left: auto;
     padding-top: 10px;
 }
+
 .row{
     width: 33.93%;
 }
@@ -138,7 +138,14 @@ h6{
 .DuoIcon, .ImgIcon, .FeelIcon{
     background-color: #2a2b2cd0;
 }
-
+.below-post{
+    position: relative;
+    top: 40px;
+}
+.btn-postImg{
+    padding: revert;
+    position: absolute;
+}
 .div1{
     position: relative;
     margin-top: 10px;
@@ -146,7 +153,10 @@ h6{
     width: 50%;
     padding-bottom: 20px;
 }
-
+.Ptag{
+    background-color: #2a2b2cd0;
+    padding-left: 20px;
+}
 
   @media(max-width:1018px){
     .midNav{

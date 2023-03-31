@@ -10,15 +10,8 @@ function Post(){
  //  const getTime = new Date().toLocaleTimeString();
   const [postStatus,setPost] = useState("");
   const [userInput,setInput] = useState([]); // here is an array for collected values
-  
-  /* var takePic = document.getElementById("profile-pic");
-   var fileInput = document.getElementById("myInputId");
-   fileInput.onchange=function (){
-   takePic.src = URL.createObjectURL(fileInput.files[0]);
-}*/
-
-  const [Picup,setupPic] = useState("");
-  const [Upload,setUpload] = useState([]);
+   
+  const [Upload,setUpload] = useState();
 
   function handleChange(event){
     const x = event.target.value; //retrieve the value from input
@@ -26,23 +19,20 @@ function Post(){
   }
 
   function handleClick(event){
-     setInput((preValue) =>{ //pass the previous value to the userInput 
+    setInput((preValue) =>{ //pass the previous value to the userInput 
       return [...preValue,postStatus] //used spred operator for collecting values from input and insert as an array index 
      });
      setPost(""); 
   }
 
-  function changeUp(event){
-      const imgTag =  event.target.src;
-      setUpload(imgTag);
+  function handleInput(event){
+    setUpload(event.target.files[0]);
   }
+   function changeInput(){
+    setUpload(null);
+   }
 
-  function PhotoUp(){
-    setupPic((...preValue)=>{
-      return [...preValue,]
-    })
-  }
-
+  
     return (
         <div className="Post">
             <div className="input-post">
@@ -54,20 +44,28 @@ function Post(){
             className="head-search" 
             value={postStatus}
            /> 
-           <button onChange={changeUp} onClick={handleClick} className="btn btn-secondary">Post</button>          
+           <button onClick={handleClick} className="btn btn-secondary">Post</button>   
             </div>
+
             <div className="input-post-2">
               <DuoIcon className="DuoIcon" />
-             <button onClick={PhotoUp} className="ImgIcon">
-             <PhotoSizeSelectActualIcon 
-                />
-               </button> 
+             <input  className="input-display" type="file" onChange={handleInput}  /> 
               <EmojiEmotionsIcon  className="FeelIcon"/>
             </div>
+
+            {Upload && (
+           <div className="below-post"> 
+              <img alt="" width={"350px"}  src={URL.createObjectURL(Upload)} />
+
+             <button className="btn-postImg" onClick={changeInput} > Delete </button> 
+             </div>
+            )}
+
             {userInput.map((Status)=> // mapping through the userInput(all of array indexes) and given each element in postArea div
             (
             <div className="postArea">
-             <h6>{Status}</h6>  
+             <h6>{Status}</h6>
+             <p className="Ptag"> { new Date().toLocaleTimeString()} </p>  
             </div>)
 
            )}
@@ -78,3 +76,5 @@ function Post(){
      );
 }
 export default Post;
+
+// <PhotoSizeSelectActualIcon className="ImgIcon"  />
